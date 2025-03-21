@@ -1,0 +1,59 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+ul {
+    list-style: none;
+    padding: 0;
+  }
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+#type-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+.type-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    transition: background 0.3s ease-in-out;
+  }
+  
+.type-btn:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+.type-btn:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+.type-btn.active {
+    background: #4caf50; /* Green for income */
+    color: white;
+  }
+  
+.type-btn[data-type="expense"].active {
+    background: #e74c3c; /* Red for expense */
+  }
