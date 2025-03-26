@@ -5,9 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Expense Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>My Tracker</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Dashboard</a></li>
+        <li><a href="expenses.html">Expenses</a></li>
+        <li><a href="income.html">Income</a></li>
+      </ul>
+    </nav>
+  </aside>
   <div class="container">
     <h1>Expense Tracker</h1>
     <form id="transaction-form">
@@ -24,6 +36,6 @@
       <p class="balance">Balance: $<span id="balance">0</span></p>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

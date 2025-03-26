@@ -1,0 +1,144 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+input {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#type-selector {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.type-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  transition: background 0.3s ease-in-out;
+}
+
+.type-btn:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.type-btn:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.type-btn.active {
+  background: #4caf50; /* Green for income */
+  color: white;
+}
+
+.type-btn[data-type="expense"].active {
+  background: #e74c3c; /* Red for expense */
+}
+.type-submit {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #482bef;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.type-submit:hover {
+  background: #070f07;
+}
+/* Container styling */
+#transaction-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Each transaction row */
+#transaction-list .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  /* Subtle background for all transactions */
+  background: #f9f9f9; 
+  border-radius: 5px;
+
+  /* Left border color to show income/expense visually */
+  border-left: 5px solid #4caf50; /* default green, can override below */
+}
+
+/* Income vs. Expense */
+#transaction-list .transaction.income {
+  border-left-color: #4caf50; /* green for income */
+}
+
+#transaction-list .transaction.expense {
+  border-left-color: #e74c3c; /* red for expense */
+}
+
+/* Description styling */
+#transaction-list .description {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Amount styling */
+#transaction-list .amount {
+  position : right;
+  font-weight: 600;
+}
+
+/* Positive amounts in green, negative in red */
+#transaction-list .amount.positive {
+  color: #4caf50;
+}
+#transaction-list .amount.negative {
+  color: #e74c3c;
+}
+.balance {
+  font-size: 1.5em;
+  margin-top: 20px;
+  border-left: 20px;
+  text-align: center;
+}
+
+.transaction {
+  position: relative; /* ensures the delete button is positioned relative to this container */
+  padding-right: 40px; /* give some space for the button */
+}
+
+/* Hide the button initially */
+.delete-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the button on hover */
+.transaction:hover .delete-btn {
+  opacity: 1;
+}

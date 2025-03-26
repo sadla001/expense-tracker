@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #444;
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 20px;
+}
