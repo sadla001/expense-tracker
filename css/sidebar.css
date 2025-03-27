@@ -41,3 +41,15 @@ body {
   background: #f4f4f4;
   padding: 20px;
 }
+
+.sidebar h2 a {
+  color: #fff;               
+  text-decoration: none;     
+  font-size: 24px;           
+  font-weight: bold;         
+  transition: color 0.3s;    
+}
+
+.sidebar h2 a:hover {
+  color: #20d15e;               
+}
